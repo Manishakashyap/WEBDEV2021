@@ -7,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FULLSTACK 2021 CSS</title>
     <style>
-        h1 {
-            color: red;
-            font-size: 25px;
-        }
-
-        p {
-            color: red;
-            /* !important; */
-            font-weight: 900;
-        }
-
-        #first {
-            color: green;
-        }
+    .one{
+        color:green;
+        
+    }
+    .two{
+        color: hotpink;
+    }
+    .orange{
+        color: orange;
+    }
+    .big{
+        font-size: 40px;
+        font-weight: 900;
+    }
     </style>
 
 </head>
@@ -32,30 +32,25 @@
     <h2>Id selector</h2>
     <h2>Element selector</h2>
     <h2>Class Selector</h2>
-    <h1>Heading One</h1>
+    <h1 class="one">Heading One</h1>
     <!-- inline css has heigher precedence than internal css -->
-    <p style="font-size: 30px; color: cornflowerblue; font-family: 'Times New Roman', Times, serif;">Lorem, ipsum dolor
+    <p class="one">Lorem, ipsum dolor
         sit amet consectetur
         adipisicing elit. Odit soluta, maiores quibusdam ut
         suscipit sint inventore dolore ad pariatur atque
         aliquam minima.Minima nihil expedita illo
         natus nam aut sunt.</p>
 
-    <p id="first">Lorem, ipsum dolor
+    <h1 class="two">Heading One</h1>
+    <p class="two">Lorem, ipsum dolor
         sit amet consectetur
         adipisicing elit. Odit soluta, maiores quibusdam ut
-        suscipit sint inventore dolore ad pariatur atque
+        suscipit sint <b class="orange">inventore dolore </b> ad pariatur atque
         aliquam minima.Minima nihil expedita illo
         natus nam aut sunt.</p>
-
-    <p id="second">Lorem, ipsum dolor
-        sit amet consectetur
-        adipisicing elit. Odit soluta, maiores quibusdam ut
-        suscipit sint inventore dolore ad pariatur atque
-        aliquam minima.Minima nihil expedita illo
-        natus nam aut sunt.</p>
-
-
+        <span class="big orange">Lorem ipsum dolor sit amet,
+             consectetur adipisicing elit. Porro eum eaque cumque omnis laboriosam ex, quod dignissimos nobis inventore veniam, aliquam eius quos aut tenetur quam? 
+            Quisquam sit voluptate quae.</span>
 
 </body>
 
