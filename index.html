@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FULLSTACK 2021 CSS</title>
+    <style>
+        h1 {
+            color: red;
+            font-size: 25px;
+        }
+
+        p {
+            color: red;
+            /* !important; */
+            font-weight: 900;
+        }
+
+        #first {
+            color: green;
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1 style="color: blue; font-size: 50px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Heading One</h1>
-    <p style="font-size: 30px; color: cornflowerblue; font-family: 'Times New Roman', Times, serif;">Lorem, ipsum dolor sit amet consectetur
+    <h1>
+        Inline css > Id selector > Element Selector
+    </h1>
+    <h2>Id selector</h2>
+    <h2>Element selector</h2>
+    <h2>Class Selector</h2>
+    <h1>Heading One</h1>
+    <!-- inline css has heigher precedence than internal css -->
+    <p style="font-size: 30px; color: cornflowerblue; font-family: 'Times New Roman', Times, serif;">Lorem, ipsum dolor
+        sit amet consectetur
         adipisicing elit. Odit soluta, maiores quibusdam ut
         suscipit sint inventore dolore ad pariatur atque
-        aliquam minima.Minima nihil expedita illo 
+        aliquam minima.Minima nihil expedita illo
         natus nam aut sunt.</p>
 
-    <h1 style="color: blue; font-size: 50px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Heading One</h1>
-    <p style="font-size: 30px; color: cornflowerblue; font-family: 'Times New Roman', Times, serif;">Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Odit soluta, maiores quibusdam ut
-            suscipit sint inventore dolore ad pariatur atque
-            aliquam minima.Minima nihil expedita illo 
-            natus nam aut sunt.</p>
-
-    <h1 style="color: blue; font-size: 50px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Heading One</h1>
-    <p style="font-size: 30px; color: cornflowerblue; font-family: 'Times New Roman', Times, serif;">Lorem, ipsum dolor sit amet consectetur
+    <p id="first">Lorem, ipsum dolor
+        sit amet consectetur
         adipisicing elit. Odit soluta, maiores quibusdam ut
         suscipit sint inventore dolore ad pariatur atque
-        aliquam minima.Minima nihil expedita illo 
+        aliquam minima.Minima nihil expedita illo
         natus nam aut sunt.</p>
+
+    <p style="font-size: 30px; color: cornflowerblue; font-family: 'Times New Roman', Times, serif;">Lorem, ipsum dolor
+        sit amet consectetur
+        adipisicing elit. Odit soluta, maiores quibusdam ut
+        suscipit sint inventore dolore ad pariatur atque
+        aliquam minima.Minima nihil expedita illo
+        natus nam aut sunt.</p>
+
+
+
 </body>
+
 </html>
