@@ -2,72 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FULLSTACK 2021 CSS</title>
-    <style>
-        *{
-            margin: 0px;
-            padding:0px;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        #logo{
-            background-color: red;
-            border-radius: 50px;
-            color: whitesmoke;
-            font-size: 20px;
-            padding:7px;
-            text-align: center;
-            position: fixed;
-            margin-top: 10px;
-            margin-left: 440px ;
-
-        }
-       img{
-           width:500px;
-           height: 300px; 
-           border-radius: 20px;
-           margin-bottom: 0;
-       }
-       .text{
-        width:500px;
-           height: 550px; 
-           border-radius: 20px;
-           margin-left:25%;
-           margin-top:8px;
-           background-color:lightgrey;
-       }
-       .center{
-          text-align: center;
-          margin:10px;
-       }
-      .btn{
-          border-radius: 5px;
-          background-color: red;
-          height: 30px;
-          color: white;
-         width:100px;
-         text-align: center;
-         /* margin:0px 200px -80px 200px; */
-         margin-top: 2px;
-         margin-left: 200px;
-         /* position:relative; */
-        
-      }
-
-    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Todo list</title>
+    
 </head>
+<style>
+    div.parent {
+        display: flex;
+        align-items: stretch;
+        background-color: #111;
+        height: 100vh;
+    }
+    
+    div.child {
+        background-color: #ffbf00;
+        flex-basis: 80%;
+    }
+    
+    div.sidebar {
+        background-color: crimson;
+        flex-basis: 20%;
+    }
+    
+    @media (max-width: 550px) {
+        div.sidebar {
+            animation: 5s expand linear infinite;
+        }
+        div.child {
+            flex-basis: 100%;
+        }
+    }
+    
+    @keyframes expand {
+        0% {
+            flex-basis: 0%;
+        }
+        100% {
+            flex-basis: 50%;
+        }
+    }
+</style>
+
+
 <body>
-    <div class="text">
-        <div id="logo">11th</div>
-    <img src="https://wallpapersdsc.net/wp-content/uploads/2016/09/Paris-HD-Background.jpg" alt="">
-   
-        <h1 class="center">Paris</h1>
-        <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea nesciunt iste quidem fugiat laborum ut praesentium quibusdam, ipsum voluptatem ducimus, consequatur placeat consectetur. Magni harum id amet ullam rem a? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere voluptatem unde beatae dolorum quo porro, ad voluptate iure quidem cumque corrupti aut nemo at. Autem voluptates praesentium nobis explicabo maxime.</p>
-        <div class="btn">Visit Paris</div>
-    </div>
-   
+    <div class="parent">
+        <div class="sidebar"></div>
+        <
+
 </body>
 
 </html>
