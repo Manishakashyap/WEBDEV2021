@@ -19,3 +19,25 @@ console.log(typeof 78.564)
 console.log(typeof 785456457968465186768465464)
 console.log(typeof -6954)
 console.log(typeof -52.78)
+
+// booleans
+console.log(typeof true)
+console.log(typeof false)
+
+// variables
+var age = 19
+console.log(age)
+
+var age_new
+console.log(age_new) // the var is not defined
+
+var age_new1 = null
+console.log( typeof age_new1) //null is actually a value
+
+var main = 19
+console.log( typeof Name)
+
+// null
+console.log()
+
+// undefined
