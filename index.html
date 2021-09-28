@@ -16,34 +16,32 @@
         box-sizing: border-box;
     }
    .parent{
-       height: 500px;
+       min-height: 500px;
        background-color: black; 
        position: relative;
+       display: flex;
+       /* flex-direction: column; */
+       /* flex-direction: column-reverse; */
+       justify-content: center; /* primary axis apply to all childrens */
+       flex-direction:row-reverse;
+       align-items: center;
    }
+   
    .child{
        width: 100px;
-       height: 100px;
+       height: 150px;
        background-color: orange;
-       /* right:0px;
-       bottom: 0px; */
-       margin-top: 200px;
-       /* position: absolute; */
-       
-   }
-   .second_child{
-       width: 100px;
-       height: 100px;
-       background-color: orange;
-       /* position: absolute; */
-       
+       margin: 10px;  
+       /* display: inline-block; */
    }
 </style>
 
 
 <body>
     <div class="parent">
-        <div class="second_child"></div>
+        <div style="background-color: red;" class="child"></div>
         <div class="child"></div>
+        <div style="background-color:royalblue;" class="child"></div>
     </div>
 </body>
 
