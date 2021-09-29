@@ -1,29 +1,27 @@
+// var para = document.getElementsByClassName('para')
+// var query = document.querySelector('.para')
+// console.log(query)
+// console.log(para)
 
-// console.log('working');
+
+// var queryall = document.querySelectorAll('.para')
+// console.log(queryall)
+
+
 var heading = document.getElementById('heading')
-console.log(typeof heading)
-
-heading.innerHTML="Hi MANISHA"
-
-var heading = document.getElementById('heading')
-var para = document.getElementsByClassName('para')
-// getelementbyid returns single object whereas
-//  getelementsbyclassname returns all collection of all the objects of the specified class
+var body = document.querySelector('body')
 
 
 console.log(heading)
-console.log(para.length)
-console.log(para)
-console.log(para[0])
-console.log(para[1])
 
-// para.push('string anything')
+heading.innerHTML = "i was added by JS"
+heading.style = "color:red;font-size:2rem"
 
-var tags = document.getElementsByTagName('a')
-console.log(tags)
+heading.classList.add('five')
+heading.classList.remove('one')
 
-var query = document.querySelector('#heading')
-console.log(query)
+body.classList.add('dark')
+// body.classList.remove('dark')
 
-var query = document.querySelector('.para')
-console.log(query)
+console.log(heading.classList)
+
