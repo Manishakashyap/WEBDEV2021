@@ -1,27 +1,32 @@
-// var para = document.getElementsByClassName('para')
-// var query = document.querySelector('.para')
-// console.log(query)
-// console.log(para)
+
+var list = document.querySelector('ul')
+
+console.log(list)
+
+var arr = ["Go the GYM","Cook oatmeal","Eat"]
+
+arr.push('Complete the assignment')
+
+for(var i=0;i<arr.length;i++){
 
 
-// var queryall = document.querySelectorAll('.para')
-// console.log(queryall)
+   // to li Element 2: for child, text
+   var element = document.createElement('li')
+   var textNode = document.createTextNode(arr[i])
+
+   
+   
+   console.log(element)
+   element.appendChild(textNode)
+   console.log(element)
 
 
-var heading = document.getElementById('heading')
-var body = document.querySelector('body')
+   list.appendChild(element)
+
+   console.log(textNode)
+
+   // console.log(arr[i])
+}
 
 
-console.log(heading)
-
-heading.innerHTML = "i was added by JS"
-heading.style = "color:red;font-size:2rem"
-
-heading.classList.add('five')
-heading.classList.remove('one')
-
-body.classList.add('dark')
-// body.classList.remove('dark')
-
-console.log(heading.classList)
 
