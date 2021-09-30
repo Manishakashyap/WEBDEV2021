@@ -1,123 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-Do List</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
 
     <style>
-        div.parent{
-            height: 500px;
-            background-color: black;
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
 
-        div.child{
-            width:100px;
+        .parent {
+            background-color: tomato;
+            height: 40vh;
+            /* width: 40vw; */
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .parent:hover .child {
+            display: block;
+            /* opacity: 0; */
+            visibility: hidden;
+            display: none;      /* clear the element */
+        }
+        .child {
             height: 100px;
-            background-color:yellow;
-            /* transition: 1s ease; */
-            /* transition-property: transform; */
-
-            animation: 1s move ease;
-            animation-fill-mode: forwards;
-            /* we used this animation here because we can directly
-            use this in child if we used in hover it will deactive 
-            with the deactivation of hover property */
-
-            animation-iteration-count:infinite;
-            /* it will play animation for 3 times to infinite */
-
-            /* animation-direction: normal; */
-            /* animation-direction: reverse; */
-            animation-direction:alternate;
-
-
-            border-radius: 50%;
+            width: 100px;
+            background-color: violet;
+            display: none; /* container disappear */
         }
-
-
-        div.child-2{
-            width:100px;
-            height: 100px;
-            margin-left: 100px;
-            background-color:yellow;
-            animation: 1s move ease;
-            animation-fill-mode: forwards;
-            animation-iteration-count:infinite ;
-            animation-direction:alternate;
-            border-radius: 50%;
-
-
-            animation-delay: 1s;
-        }
-
-
-        div.parent:hover div.child{
-            /* transform:translateX(80vw); */
-            /* background-color: aqua; */
-            
-            
-            /* animation: 1s move ease;
-            animation-fill-mode: forwards; after the animation state */
-        }
-
-        @keyframes move {
-            0%{
-                transform:translateY(0vw); /*we can use it in Y direction also*/
-            }
-            /* 1%{
-                transform:translateX(1vw);
-            }
-            2%{
-                transform:translateX(2vw);
-            }
-            3%{}
-            .
-            .
-            . */
-            
-            
-            /* 50%{
-                transform: translateX(300px , 200px);
-                background-color: violet;
-            } */
-
-
-
-            50%{
-                transform: translate(300px , 250px);
-                background-color: violet;
-            }
-
-            700%{
-                transform: translate(500px , 250px);
-                background-color: red;
-            }
-
-
-
-            100%{
-                transform:translateY(400px);
-                background-color: tomato;
-            }
-
-            /* so we defined first 0% and final 100% by own 
-            let it create all other points */
-
-        }
-        /* to animate we need
-         frames per second (fps) but in 
-         css we have points to do animation 
-         that's why we need each percent defined */
     </style>
 </head>
+
 <body>
+
     <div class="parent">
+        adipisicing elit.
+        Iure unde dignissimos qua
+        m, eligendi minus molestiae
+        incidunt tenetur nemo. R
+        eprehenderit fugiat autem
+        magni? Aspernatur neque a
+        tque accusantium omnis ni
+        hil repellendus mollitia!
         <div class="child"></div>
-        <div class="child-2"></div>
     </div>
 
-    
+    <!-- <footer>
+        <div class="footer">
+            <div class="name">Manisha</div>
+            <div class="social">
+                <img src="./asset-todo/instagram.png" alt="">
+                <img src="./asset-todo/linkedin.png" alt="">
+            </div>
+        </div>
+    </footer> -->
 </body>
+
 </html>
