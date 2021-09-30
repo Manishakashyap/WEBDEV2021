@@ -1,5 +1,37 @@
-.footer{
-    height: 200px;
-    margin-bottom: 0;
+
+import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    color: unset;
+    text-decoration: none;
+    font-family: "poppins";
+}
+
+header{
+    height: 300px;
+    background-image: url("../asset-todo/day.jpeg");
+    background-size:cover;
+    background-position:center;
+}
+
+/* footerstyles */
+img.social{
+    width: 20px;
+    margin: 0px 5px;
+}
+footer{
+    background-color:lightgray;
+    color: #4f4dde;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size:1.2rem;
+   margin-bottom: 0px;
+   width: 100%;
+   bottom: 0;
+   position: absolute;
 }
