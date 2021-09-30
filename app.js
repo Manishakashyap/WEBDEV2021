@@ -1,32 +1,64 @@
 
-var list = document.querySelector('ul')
+// function great(name = 'john',age = 99){
+//    console.log('Manisha')
+//    console.log('Hey '+name+' your age is '+age)
+//    // declare the default value through the parameter
 
-console.log(list)
+// }
 
-var arr = ["Go the GYM","Cook oatmeal","Eat"]
+// great('Rupali');
 
-arr.push('Complete the assignment')
+// function add(a,b){
+//    // console.log(a+b)
+//    var sum = a+b
+//    return sum     //keyword declaration
+// }
 
-for(var i=0;i<arr.length;i++){
+// add(12,10)
+
+// var result = add(10,20)
+// console.log(result)
+
+// console.log(add(10,20))
+// console.log(sum)
+
+// var add = function (a=0,b=0){   //function expression
+//    // console.log(a+b)
+//    var sum = a+b
+//    return sum
+// }
+
+// console.log(add(10,20))
 
 
-   // to li Element 2: for child, text
-   var element = document.createElement('li')
-   var textNode = document.createTextNode(arr[i])
+// var greet = function (name = 'John', age = 99) {
+//    // console.log('Hello')
+//    console.log(name, age)
+//    // console.log('Hey ' + name + " Your age is " + age)/
+// }
 
-   
-   
-   console.log(element)
-   element.appendChild(textNode)
-   console.log(element)
+// greet('Manisha',23)
 
 
-   list.appendChild(element)
+// console.log(add(10, 20))
 
-   console.log(textNode)
+// function add(a = 0, b = 0) {
+//    var sum = a + b
+//    return sum
+// }
 
-   // console.log(arr[i])
+// var add = function (a = 0, b = 0) {
+//    var sum = a + b
+//    return sum
+// }
+
+
+
+//arrow function as6
+var add =  (a = 0, b = 0) => {
+   var sum = a + b
+   return sum
 }
-
+console.log(add(10, 20))
 
 
