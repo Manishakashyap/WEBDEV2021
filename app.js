@@ -1,64 +1,66 @@
 
-// function great(name = 'john',age = 99){
-//    console.log('Manisha')
-//    console.log('Hey '+name+' your age is '+age)
-//    // declare the default value through the parameter
 
-// }
+// //arrow function as6
+// var add =  (a = 0, b = 0) => {  // => its like an shorthand
+//    console.log('expression')     //replace arrow with function and nothing will change
 
-// great('Rupali');
-
-// function add(a,b){
-//    // console.log(a+b)
-//    var sum = a+b
-//    return sum     //keyword declaration
-// }
-
-// add(12,10)
-
-// var result = add(10,20)
-// console.log(result)
-
-// console.log(add(10,20))
-// console.log(sum)
-
-// var add = function (a=0,b=0){   //function expression
-//    // console.log(a+b)
-//    var sum = a+b
+//    var sum = a + b     
 //    return sum
 // }
-
-// console.log(add(10,20))
-
-
-// var greet = function (name = 'John', age = 99) {
-//    // console.log('Hello')
-//    console.log(name, age)
-//    // console.log('Hey ' + name + " Your age is " + age)/
-// }
-
-// greet('Manisha',23)
-
-
 // console.log(add(10, 20))
+// //expression function or definition function which will be called when both are declared and defined
 
-// function add(a = 0, b = 0) {
-//    var sum = a + b
-//    return sum
+
+// //another shortcut
+// var add =  (a = 0, b = 0) =>  a+b
+// console.log(add(12,10))
+
+// const greet = (Name) =>   'Hi '+ Name
+// console.log(greet('Manisha'))
+
+
+// //callback function => after something is completed this function is execute
+ //var arr = ['goto GYM' , 'Eat Food','Clean House']
+
+// for(var i=0;i<arr.length; i++){
+//    console.log(arr[i])
 // }
 
-// var add = function (a = 0, b = 0) {
-//    var sum = a + b
-//    return sum
+//foreach methad of array arr.forEach()
+//call the function after a certain task after iteration
+// var callbackFunction =(misthi,konsa_no) => {
+//    console.log(misthi,konsa_no)
 // }
 
+// arr.forEach(callbackFunction)
 
 
-//arrow function as6
-var add =  (a = 0, b = 0) => {
-   var sum = a + b
-   return sum
+// var arr = ['goto GYM' , 'Eat Food','Clean House']
+
+// arr.forEach((element, index) => {
+//    console.log(element, index)
+// })
+
+var button = document.querySelector('button')
+var input = document.querySelector('input')
+var list = document.querySelector('ul')
+
+// const callbackfunc = (misthi) =>{
+//    console.log(misthi.target)
+//    console.log(input.value)
+// }
+
+// button.addEventListener('click',callbackfunc)
+
+
+
+const callback = (event) => {
+   const inputvalue = input.value
+   const element = document.createElement('li')
+   const textnode = document.createTextNode(inputvalue)
+   element.appendChild(textnode)
+   list.appendChild(element)
 }
-console.log(add(10, 20))
 
+button.addEventListener('click',callback)
 
