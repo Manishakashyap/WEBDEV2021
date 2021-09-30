@@ -54,13 +54,23 @@ var list = document.querySelector('ul')
 
 
 
-const callback = (event) => {
-   const inputvalue = input.value
-   const element = document.createElement('li')
-   const textnode = document.createTextNode(inputvalue)
-   element.appendChild(textnode)
-   list.appendChild(element)
-}
+// const callback = (event) => {
+//    const inputvalue = input.value
+//    const element = document.createElement('li')
+//    const textnode = document.createTextNode(inputvalue)
+//    element.appendChild(textnode)
+//    list.appendChild(element)
+// }
 
+// button.addEventListener('click',callback)
+
+
+var button = document.querySelector('button')
+var body = document.querySelector('body')
+const callback = (event) => {
+   // body.classList.add('dark')
+   body.classList.toggle('dark')
+
+}
 button.addEventListener('click',callback)
 
