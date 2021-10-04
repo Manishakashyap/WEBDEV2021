@@ -124,6 +124,6 @@ console.log(Object.values(flower))
 // },0)
 // console.log('hi')
 
-var data = fetch('https://jsonplaceholder.typicode.com/todos/10')
+// var data = fetch('https://jsonplaceholder.typicode.com/todos/10')
 
-console.log(data)
+// console.log(data)
