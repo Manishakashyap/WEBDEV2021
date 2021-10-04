@@ -1,93 +1,44 @@
+var arr = [1,2,3,4,5]
 
-const num1 = document.querySelectorAll('input')[0]
-const num2 =document.querySelectorAll('input')[1]
-
-// var num2 = document.querySelector('input')
-
-
-//step : 1 select all element correctly with tags like this
-const add = document.querySelector('#add')
-const multiply = document.querySelectorAll('#multiply')[0]
-const sub = document.querySelectorAll('#sub')[0]
-const resultbox = document.querySelector('.result')
-
-console.log(add,multiply,num1,num2,resultbox,sub)
+arr.push(6)  //it add the element at last/end of array
+// arr.shift(7)
+// arr.unshift(6)  // it adds the element at the beginning of array
 
 
+console.log(arr.unshift(6)) //they are methods so will return something as well and appends also
+console.log(arr.push(7)) //returns the value
 
-//step:2 add event listners so buttons can perfornm tasks 
-//so we need callback function to perform a task
- const sum = () => {
-    const result = parseInt(num1.value) + parseInt(num2.value) 
-    console.log(result)
-    resultbox.innerHTML = result
-    //or resultbox.textcontent = result
- }
 
-add.addEventListener('click',sum)
+// arr.shift(7) remove 1st element of array
+arr.shift()
+console.log(arr)
 
-const mul = () =>{
-   var result = parseInt(num1.value)* parseInt(num2.value)
-   console.log(result)
-   resultbox.innerHTML=result
+//arr.slice() not in original array create another sliced array 2 to 4
+console.log(arr.slice(2,5))
+console.log(arr)
+
+//array of even numbers
+var even_arr = []
+
+for(var i=0;i<=arr.length;i++){
+   if (arr[i]%2==0){
+       even_arr.push(arr[i])
+     
    }
-
-multiply.addEventListener('click',mul)
-
-
-const subtract = () =>{
-   var result = parseInt(num1.value) - parseInt(num2.value)
-   console.log(result)
-   resultbox.innerHTML=result
-   }
-
-sub.addEventListener('click',subtract)
-
-
-
-
-
-
-
-
-const calculate = (event,operation) => {
-
-   // console.log(event.target)
-
-   // if(opration=='add'){
-   //    console.log('adding')
-   // } else if (opration == 'multiply')  {
-   //    console.log(event,'multiply')
-   // }
-
-   //switch case
-   switch (operation) {
-      case "add":
-         resultbox.innerHTML = parseInt(num1.value) + parseInt(num2.value)  
-         break
-      case "multiply":
-         resultbox.innerHTML = parseInt(num1.value) * parseInt(num2.value)  
-         break
-      case "sub":
-         resultbox.innerHTML = parseInt(num1.value) - parseInt(num2.value)  
-         break
-      default:
-         resultbox,innerHTML= "Not a valid operation"
-   }
+  
 }
+console.log(even_arr) //for this we use filter
 
-add.addEventListener('click', (event) =>{//added (event) 
-    return calculate(event,'add')
+//arr.filter() if consiton pass then add it accepts callbackfunction
+
+var arr1 = [1,2,3,4,5,6,7,8]
+
+//  arr1.filter((element,index)=> { //assure working
+//    console.log( element,index)
+// }) 
+
+new_arr = arr1.filter((element,index)=> {
+   if(element%2 === 0) return true
+
 })
-
-multiply.addEventListener('click' , (event) =>{ //added (event) 
-   // console.log('multiplying')
-   calculate('multiply')
-})
-
-sub.addEventListener('click',(Event)=>{
-   calculate('sub')
-} )
-
-//another way
-// multiply.addEventListener('click' , () => calculate('multiply')
+console.log(new_arr)
