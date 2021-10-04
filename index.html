@@ -5,24 +5,39 @@
     <title>JavaScript</title>
     <script defer src="./app.js"></script>
     <style>
-        .animate{
-           transform:  translateX(100px);
+        input{
+            background-color: lightcyan;
+            color:black;
+            border-color: blue;
+
         }
-        .dark{
-            background-color: black;
-            color: white;
+        button{
+            border-radius: 30px;
+            border-width: thin;
+            border-color: blue;
         }
     </style>
 </head>
 
 <body>
-  
-    <ul>
-        <li>One</li>
-    </ul>
+    <input type="number" />
+    <input type="number" />
+    <br />
+    <br>
+    <button id="add">Add</button>
+    <button id="multiply">Multiply</button>
+    <button id="sub">Subtract</button>
+    <!-- <button id="multiply">Multiply</button> -->
+    <br>
+    <br>
+    <div>
+        Result :
+        <span class="result"></span>
+    </div>
 </body>
 
 </html>
+
 
 
 
