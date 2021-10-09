@@ -22,7 +22,7 @@
 
 // //..........................promise......................
 // let value = new Promise((resolve,reject) => {
-//    setTimeout(() => {
+-//    setTimeout(() => {
 //       resolve('Hello')
 //    },3000)
 // })
@@ -125,7 +125,7 @@
 
     const table = document.querySelector('table')
 
-    console.log(table)
+    // console.log(table)
 
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(res => res.json())
@@ -135,13 +135,15 @@
          
         let newRow = document.createElement('tr')
         let template = `
-        <td>ID</td>
-        <td>Name</td>
-        <td>Email</td>
-        <td>User Name</td>`
+        <td>${user.id}</td>
+        <td>${user.name}</td>
+        <td>${user.email}</td>
+        <td>${user.username}</td>`
 
+        console.log(template)
+
+        newRow.appendChild(template)
         table.appendChild(newRow)
-
         })
     })
 
