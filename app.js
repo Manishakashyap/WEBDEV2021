@@ -1,31 +1,26 @@
-// //.....................Node.js..................
-// const path = require('path')
-// // console.log(path)
-// // console.log(path.resolve('./app.js'))
+// //...............file system...............
+const fs = require('fs')
+// //access to read write on hard drive
 
-// console.log(path.relative('/',"./app.js"))
-// // utils ka path respect to temp temp util.js
-// console.log(path.resolve("./app.js"))
-// //if we use absolute path  that in our computer we cant use in another computer
+// // fs.readFile('./test.txt','utf8',(error,data)=>{
 
-
- // Users\Manisha\Desktop\WEBDEV2021\app.js=resolve
- // C:\Users\Manisha\Desktop\WEBDEV2021\app.js=relative
+// // if(error) console.log(error)
+// // else console.log(data.toString())//buffer is raw data array 
+// // // else console.log(data)
+// // // else console.log(typeof data)
+// // }) 
 
 
-//................extention............
-// const path = require('path')
-// console.log(path.extname('./app.js'))
+// console.log(fs.readFileSync('./test.txt','utf8'))
+
+// console.log(`I'm a random log`)
 
 
+//.................WriteFile.....................
+// fs.writeFile('./test.txt',"HI ",(error) => {
+//     if (error) console.log(error)
+// })
 
-//................dirname...................
-const path = require('path')
-// console.log(path.dirname('./temp/utils.js'))
-
-//.................__dirname.........
-// console.log(__dirname)
-
-//........path/join().............
-console.log(path.join(__dirname,'app.js')) //same as resolve
-//only diff is.....
+fs.writeFile('./test.txt',`Appemd me ${fs.readFileSync('./test.txt','utf8')}`,(error) => {
+    if (error) console.log(error)
+})
