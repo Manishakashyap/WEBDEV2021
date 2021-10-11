@@ -50,7 +50,7 @@ const getData = async (item) =>{
 
 //added eventlistner
 button.addEventListener('click',(e)=>{
-    
+    parent.innerHTML=""//Anisha Change
    getData(getText.value)
 
 })
