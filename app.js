@@ -1,24 +1,3 @@
-// const ul = document.querySelector('ul')
-// const getText = document.querySelector('input')
-// const button = document.querySelector('Button')
-
-
-// console.log(button)
-
-// const getData = async (item) =>{
-//     console.log(item)
-//     let url = `https://api.edamam.com/search?app_id=817e7808&app_key=8de83a1a9971c1c9db962a20714b14a4&q=${item}`
-    
-//     console.log(url)
-//     const res = await fetch(url)
-//     const data = await res.json()
-//     console.log(data.hits)
-// }
-// button.addEventListener('click',(e)=>{
-    
-//    getData(getText.value)
-
-// })
 
 
 //.................codepen food card..................
@@ -40,24 +19,26 @@ const getData = async (item) =>{
     console.log(data.hits)
     const recipies = data.hits
     recipies.forEach(item => {
-        console.log(item)
-        console.log(item.recipe.label)
+        // console.log(item)
+        // console.log(item.recipe.label)
+        const{recipe} =item
+        const {label,image,source,calories} = recipe
         const template = `
         <article class="card">
-        <img class="card__image" src="https://i.ibb.co/RT0bjJq/food1.png" />
+        <img class="card__image" src=${image} />
         <div class="card__data">
           <div class="card__info">
-            <h2>Nombre Comida</h2>
-            <p>Descripcion de la comida, con ingredientes</p>
+            <h2>${label}</h2>
+            <p>From ${source}</p>
           </div>
-          <h3 class="card__price">$7.50</h3>
+          <h3 class="card__price">${calories.toFixed(2)}</h3>
           <button class="card__add">+</button>
         </div>
       </article>`
 
       const newCard = document.createElement('article')
       newCard.setAttribute('class','card')
-      newCard.setAttribute('style','margin-bottom:20px')
+      newCard.setAttribute('style','margin-bottom:50px')
       newCard.innerHTML=template
       parent.appendChild(newCard)
     //   parent.innerHTML = card
@@ -73,14 +54,5 @@ button.addEventListener('click',(e)=>{
    getData(getText.value)
 
 })
-
-//......................Destructuring.................
-const person = {
-    name:"Manisha",
-    age:22,
-    country:"India"
-}
-const {name,age,country} =person
-console.log(name,age,country)
 
 
