@@ -1,13 +1,10 @@
-let greet = new Promise((resolve,reject) =>{
-  setTimeout(() =>{
-    resolve("Welcome")
-},5000)
-})
 
-greet.then(value => {
-    console.log(value)
-    return "Welcome Again"
-}).then(newValue =>{
-    console.log(newValue)
-   
+let response = fetch('https://jsonplaceholder.typicode.com/todos/10')
+
+console.log(response) //promise return with pending
+
+response.then (data =>{
+    return (data.json())
+}).then (content => {
+    console.log(content)
 })
