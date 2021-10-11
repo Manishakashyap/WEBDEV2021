@@ -41,6 +41,7 @@ const getData = async (item) =>{
     const recipies = data.hits
     recipies.forEach(item => {
         console.log(item)
+        console.log(item.recipe.label)
         const template = `
         <article class="card">
         <img class="card__image" src="https://i.ibb.co/RT0bjJq/food1.png" />
@@ -56,6 +57,7 @@ const getData = async (item) =>{
 
       const newCard = document.createElement('article')
       newCard.setAttribute('class','card')
+      newCard.setAttribute('style','margin-bottom:20px')
       newCard.innerHTML=template
       parent.appendChild(newCard)
     //   parent.innerHTML = card
@@ -72,6 +74,13 @@ button.addEventListener('click',(e)=>{
 
 })
 
-
+//......................Destructuring.................
+const person = {
+    name:"Manisha",
+    age:22,
+    country:"India"
+}
+const {name,age,country} =person
+console.log(name,age,country)
 
 
