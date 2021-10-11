@@ -3,8 +3,11 @@ let greet = new Promise((resolve,reject) =>{
     resolve("Welcome")
 },5000)
 })
-console.log(greet)
 
-setTimeout(() =>{
-    console.log(greet)
-},6000)
+greet.then(value => {
+    console.log(value)
+    return "Welcome Again"
+}).then(newValue =>{
+    console.log(newValue)
+   
+})
