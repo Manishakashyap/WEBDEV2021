@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>I'm a heading</h1>
+    <!-- <h1>I'm a heading</h1>
     <img src="https://i.pinimg.com/236x/32/dc/3b/32dc3bf58d31e8265a31b63e3dacb3d5.jpg" alt="" srcset="">
     <p>Lorem ipsum dolor sit amet 
         consectetur adipisicing eli
@@ -15,12 +15,26 @@
         atibus debitis, nesciunt aut
         em consequuntur saepe, repell
         at minima, accusantium dolor
-        es consequatur. Exercitatio
+        es consequatur.q Exercitatio
         nem assumenda accusantium a
         utem maiores, nulla tempora 
         corporis.</p>
         <script>
             window.alert('I am a alert')
-        </script>
+        </script> -->
+        <ul></ul>
+        <script>
+         fetch("http://localhost:3000/names")
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                let list = document.querySelector("ul");
+                data.forEach((item) => {
+                    list.append(item.name);
+                });
+            });
+        
+        </script> 
+    <!-- not worked -->
 </body>
 </html>

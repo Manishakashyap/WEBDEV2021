@@ -44,28 +44,69 @@
 // })
 
 //so why we need express if we have many files
-const http = require('http')
-const fs = require('fs')
-const path = require('path')
+// const http = require('http')
+// const fs = require('fs')
+// const path = require('path')
 
 
 
-const server = http.createServer((request,response)=>{
+// const server = http.createServer((request,response)=>{
    
-    const {url} = request
-    // console.log(url)
-    if (url == '/login'){
-    response.write('<h1>Log in </h1>')
-    response.end()
-    }
-    if (url == '/signup'){
-        response.write('<h1>sign up</h1>')
-        response.end()
-    }
+//     const {url} = request
+//     // console.log(url)
+//     if (url == '/login'){
+//     response.write('<h1>Log in </h1>')
+//     response.end()
+//     }
+//     if (url == '/signup'){
+//         response.write('<h1>sign up</h1>')
+//         response.end()
+//     }
     
 
+// })
+
+// server.listen(3000,()=>{
+//     console.log(`server listning at PORT: ${3000}`)
+// })
+
+
+//..................express................
+const express = require('express')
+const app = express()
+
+//to create route
+
+const data =[{name:"Manisha"},{name:"Rupali"},{name:"Sanjana"}]
+app.get('/',(req,res)=>{
+    // console.log(req)
+    console.log(req.url)
+    res.send('This is a response')
 })
 
-server.listen(3000,()=>{
-    console.log(`server listning at PORT: ${3000}`)
+const signin = "Hii this is sign in"
+app.get('/signin',(req,res)=>{
+    // console.log(req)
+    console.log(req.url)
+    res.send(signin)
+})
+
+app.get('/signup',(req,res)=>{
+    // console.log(req)
+    console.log(req.url)
+    res.send('This is a SignUp')
+})
+
+app.get('/names',(req,res)=>{
+    // console.log(req)
+    console.log(req.url)
+    res.send(data)
+})
+
+
+
+
+
+app.listen(3000,()=>{
+    console.log("Server is running on port 3000")
 })
